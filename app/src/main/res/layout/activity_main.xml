@@ -20,7 +20,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.224" />
 
     <Button
         android:id="@+id/btnmenu"
@@ -28,7 +28,22 @@
         android:layout_height="84dp"
         android:text="MENU"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="160dp" />
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="422dp"
+        android:layout_height="110dp"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="14sp"
+        android:text="BIENVENIDO"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>
