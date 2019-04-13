@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppRestaurante</string>
+    <string name="elige_una_opci_n">Elige una Opción</string>
+    <string name="menu">MENU</string>
 </resources>
