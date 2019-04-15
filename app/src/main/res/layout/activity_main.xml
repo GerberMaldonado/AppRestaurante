@@ -7,16 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0F0F1"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:text="@string/elije"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="20dp"
         android:textSize="30sp" />
 
     <!--Fila 1-->
@@ -24,8 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:orientation="horizontal">
 
         <!--Opcion 1-->
         <LinearLayout
@@ -96,8 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:orientation="horizontal">
 
         <!--Opcion 1-->
         <LinearLayout
@@ -107,7 +105,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/botones_curvados"
-            android:clickable="true"
+            android:onClick="menu"
             android:orientation="vertical">
 
             <ImageView

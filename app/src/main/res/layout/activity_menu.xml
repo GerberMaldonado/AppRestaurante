@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Menu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/menu"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp" />
+
+    <!--Fila 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--Opcion 1-->
+        <LinearLayout
+            android:id="@+id/linear1_0"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/botones_curvados"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:clickable="false"
+                android:padding="8dp"
+                android:text="Prueba"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Fin Fila 1-->
+
+    <!--Fila 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--Opcion 1-->
+        <LinearLayout
+            android:id="@+id/linear1_1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/botones_curvados"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/menu1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:clickable="false"
+                android:padding="8dp"
+                android:text="Prueba"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Fin Fila 1-->
+
+</LinearLayout>
