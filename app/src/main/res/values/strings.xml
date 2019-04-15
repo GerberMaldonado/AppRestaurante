@@ -1,5 +1,12 @@
 <resources>
+    //Principal
     <string name="app_name">AppRestaurante</string>
-    <string name="elige_una_opci_n">Elige una Opción</string>
-    <string name="menu">MENU</string>
+    <string name="a_domicilio">A Domicilio</string>
+    <string name="reservar">Reservar Mesa</string>
+    <string name="elije">Elije una Opción</string>
+    <string name="menu">Elije tú menu</string>
+
+
+
+
 </resources>

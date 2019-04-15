@@ -1,57 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fondo"
+    android:id="@+id/fragment_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:minWidth="@android:dimen/app_icon_size"
-    android:visibility="visible"
-    tools:context=".MainActivity">
+    android:background="#F0F0F1"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/elige_una_opci_n"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnmenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/elije"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/btnmenu"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="292dp"
-        android:text="@string/menu"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="wrap_content"
+    <!--Fila 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="334dp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-</android.support.constraint.ConstraintLayout>
+        <!--Opcion 1-->
+        <LinearLayout
+            android:id="@+id/linear_0"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/botones_curvados"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/a_domicilio"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:src="@mipmap/ic_a_domicilio" />
+
+            <TextView
+                android:id="@+id/txt_sem1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:padding="8dp"
+                android:text="@string/a_domicilio"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--Opcion 2-->
+        <LinearLayout
+            android:id="@+id/linear_1"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/botones_curvados"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/reservar_mesa"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_reservar" />
+
+            <TextView
+                android:id="@+id/txt_semestre2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:padding="8dp"
+                android:text="@string/reservar"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Fin de Fila 1-->
+
+    <!--Fila 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--Opcion 1-->
+        <LinearLayout
+            android:id="@+id/linear_3"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/botones_curvados"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imagen_menu"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:src="@mipmap/ic_menu" />
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:padding="8dp"
+                android:text="@string/menu"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--Fin de Fila 1-->
+</LinearLayout>
