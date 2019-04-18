@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".a_domicilio"></activity>
+        <activity android:name=".Reservacion"></activity>
+        <activity android:name=".a_domicilio" />
         <activity android:name=".Menu" />
         <activity android:name=".MainActivity">
             <intent-filter>

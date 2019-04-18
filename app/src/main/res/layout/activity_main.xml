@@ -67,6 +67,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/botones_curvados"
+            android:onClick="reservacion"
             android:orientation="vertical">
 
             <ImageView
