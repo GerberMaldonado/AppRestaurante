@@ -1,5 +1,6 @@
 <resources>
     //Principal
+    <string name="restaurante">Restaurante S.M.</string>
     <string name="app_name">AppRestaurante</string>
     <string name="a_domicilio">A Domicilio</string>
     <string name="reservar">Reservar Mesa</string>

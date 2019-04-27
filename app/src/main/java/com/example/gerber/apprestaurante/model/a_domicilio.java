@@ -1,7 +1,9 @@
-package com.example.gerber.apprestaurante;
+package com.example.gerber.apprestaurante.model;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.gerber.apprestaurante.R;
 
 public class a_domicilio extends AppCompatActivity {
 

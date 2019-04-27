@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="#F0F0F1"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".model.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
