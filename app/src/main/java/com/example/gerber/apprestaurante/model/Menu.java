@@ -5,9 +5,8 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.gerber.apprestaurante.requests.Platillo;
 import com.example.gerber.apprestaurante.R;
-import com.example.gerber.apprestaurante.interfaces.PlatilloService;
+import com.example.gerber.apprestaurante.interfaces.MenuService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,27 +33,27 @@ public class Menu extends AppCompatActivity {
         list = findViewById(R.id.list);
         list.setAdapter(arrayAdapter);
         getPosts();
-    }
+}
 
     private void getPosts() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.20.109")
+                .baseUrl("http://192.168.43.8")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        PlatilloService platilloService = retrofit.create(PlatilloService.class);
-        Call< List<Platillo> > call = platilloService.getPlatillo();
+        MenuService menuService = retrofit.create(MenuService.class);
+        Call< List<com.example.gerber.apprestaurante.requests.Menu> > call = menuService.getMenu();
 
-        call.enqueue(new Callback<List<Platillo>>() {
+        call.enqueue(new Callback<List<com.example.gerber.apprestaurante.requests.Menu>>() {
             @Override
-            public void onResponse(Call<List<Platillo>> call, Response<List<Platillo>> response) {
-                for(Platillo platillo : response.body()) {
-                    titles.add(platillo.getNombrePlatillo());
+            public void onResponse(Call<List<com.example.gerber.apprestaurante.requests.Menu>> call, Response<List<com.example.gerber.apprestaurante.requests.Menu>> response) {
+                for(com.example.gerber.apprestaurante.requests.Menu menu : response.body()) {
+                    titles.add(menu.getNombreMenu());
                 }
                 arrayAdapter.notifyDataSetChanged();
             }
 
             @Override
-            public void onFailure(Call<List<Platillo>> call, Throwable t) {
+            public void onFailure(Call<List<com.example.gerber.apprestaurante.requests.Menu>> call, Throwable t) {
             }
         });
     }
