@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondologin"
     tools:context=".model.Login">
 
     <LinearLayout
@@ -11,21 +12,21 @@
         android:layout_height="453dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="100dp"
-        android:background="@android:drawable/gallery_thumb"
+        android:background="@drawable/ventana_principal_redondo"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586">
+        app:layout_constraintVertical_bias="0.402">
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:hint="nombre_usuario"
+            android:hint="Nombre Usuario"
             android:textColor="@android:color/holo_orange_light" />
 
         <EditText
