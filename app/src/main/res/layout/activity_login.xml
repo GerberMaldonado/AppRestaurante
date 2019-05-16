@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/img_login2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".model.Login">
@@ -11,22 +12,22 @@
         android:layout_height="453dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="100dp"
-        android:background="@android:drawable/gallery_thumb"
+        android:background="@drawable/ventana_principal_redondo"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586">
+        app:layout_constraintVertical_bias="0.402">
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:hint="nombre_usuario"
-            android:textColor="@android:color/holo_orange_light" />
+            android:hint="Nombre Usuario"
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/editText2"
@@ -37,20 +38,16 @@
             android:hint="Teléfono "
             android:inputType="phone"
             android:maxLength="8"
-            android:textColor="@android:color/holo_orange_light" />
-
-
+            android:textColor="@android:color/black" />
+        
         <Button
             android:id="@+id/btn_siguiente"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:background="@drawable/botones_curvados"
-            android:onClick="login"
+            android:onClick="Guardar"
             android:text="Siguiente"
             android:textStyle="bold" />
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="277dp" />
-
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

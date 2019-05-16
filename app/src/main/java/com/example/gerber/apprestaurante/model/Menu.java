@@ -37,7 +37,7 @@ public class Menu extends AppCompatActivity {
 
     private void getPosts() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.43.8")
+                .baseUrl("http://192.168.20.101")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         MenuService menuService = retrofit.create(MenuService.class);
