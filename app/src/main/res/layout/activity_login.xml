@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondologin"
+    android:background="@drawable/img_login2"
     tools:context=".model.Login">
 
     <LinearLayout
@@ -27,7 +27,8 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:hint="Nombre Usuario"
-            android:textColor="@android:color/black" />
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white" />
 
         <EditText
             android:id="@+id/editText2"
@@ -36,9 +37,10 @@
             android:layout_margin="15dp"
             android:ems="10"
             android:hint="Teléfono "
+            android:textColorHint="@android:color/white"
             android:inputType="phone"
             android:maxLength="8"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/white" />
         
         <Button
             android:id="@+id/btn_siguiente"
@@ -47,6 +49,7 @@
             android:background="@drawable/botones_curvados"
             android:onClick="Guardar"
             android:text="Siguiente"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
     </LinearLayout>
