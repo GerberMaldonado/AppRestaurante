@@ -20,7 +20,7 @@ import com.example.gerber.apprestaurante.R;
 
 public class Login extends AppCompatActivity {
 
-    EditText etNombre; //recive Nombre
+    EditText etNombre; //Recive Nombre
     EditText etTelefono; //Recive Telefono
 
     @Override
@@ -30,6 +30,7 @@ public class Login extends AppCompatActivity {
 
         etNombre = findViewById(R.id.editText);
         etTelefono = findViewById(R.id.editText2);
+
     }
 
     public void Guardar(View view) {
@@ -59,7 +60,7 @@ public class Login extends AppCompatActivity {
     private class InsertarPersona extends AsyncTask<Void, Void, Boolean> {
         public Boolean doInBackground(Void... params) {
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost("http://localhost/api_rest_crud_vdos/metodos_insertar/create_login.php/");
+            HttpPost httpPost = new HttpPost("http://192.168.20.101/terminado/add.php/");
             httpPost.setHeader("Content-Type", "application/json");
 
             JSONObject jsonObject = new JSONObject();
@@ -67,8 +68,9 @@ public class Login extends AppCompatActivity {
                 SharedPreferences nombre = getSharedPreferences("datos",Context.MODE_PRIVATE);
                 SharedPreferences telefono = getSharedPreferences("datos",Context.MODE_PRIVATE);
 
-                jsonObject.put("nombreUsuario", nombre.getString("nombre",""));
-                jsonObject.put("telefonoUsuario", telefono.getString("telefono",""));
+                jsonObject.put("nombre", nombre.getString("nombre",""));
+                jsonObject.put("telefono", telefono.getString("telefono",""));
+
                 StringEntity stringEntity = new StringEntity(jsonObject.toString());
                 httpPost.setEntity(stringEntity);
                 httpClient.execute(httpPost);

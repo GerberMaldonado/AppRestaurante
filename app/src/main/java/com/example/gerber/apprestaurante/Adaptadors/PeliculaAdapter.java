@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.gerber.apprestaurante.Prueba.Pelicula;
 import com.example.gerber.apprestaurante.R;
-import com.example.gerber.apprestaurante.requests.Login;
 
 import java.util.ArrayList;
 
@@ -16,23 +16,23 @@ import java.util.ArrayList;
  * Created by gerber on 29/03/2018.
  */
 
-public class LoginAdapter extends BaseAdapter {
+public class PeliculaAdapter extends BaseAdapter {
     Context context;
-    ArrayList<Login> loginArrayList;
+    ArrayList<Pelicula> peliculaArrayList;
 
-    public LoginAdapter(Context context, ArrayList<Login> loginArrayList) {
+    public PeliculaAdapter(Context context, ArrayList<Pelicula> peliculaArrayList) {
         this.context = context;
-        this.loginArrayList = loginArrayList;
+        this.peliculaArrayList = peliculaArrayList;
     }
 
     @Override
     public int getCount() {
-        return this.loginArrayList.size();
+        return this.peliculaArrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.loginArrayList.get(position);
+        return this.peliculaArrayList.get(position);
     }
 
     @Override
@@ -47,11 +47,12 @@ public class LoginAdapter extends BaseAdapter {
         TextView Nombre = (TextView) view.findViewById(R.id.editText);
         TextView Telefono = (TextView) view.findViewById(R.id.editText2);
 
-        Login login = this.loginArrayList.get(position);
-        if(login != null){
+        Pelicula pelicula = this.peliculaArrayList.get(position);
 
-            Nombre.setText(String.format("Nombre: %s", login.getNombreUsuario()));
-            Telefono.setText(String.format("Telefono: %s", login.getTelefonoUsuario()));
+        if(pelicula != null){
+
+            Nombre.setText(String.format("nombre: %s", pelicula.getNombre()));
+            Telefono.setText(String.format("telefono: %s", pelicula.getTelefono()));
 
         }
         return view;
