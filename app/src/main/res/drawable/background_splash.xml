@@ -2,12 +2,15 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@android:color/holo_orange_dark"/>
+        android:drawable="@android:color/white"/>
 
     <item>
         <bitmap
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:src="@drawable/ic_mariano"/>
+            android:src="@drawable/splash2" />
+
     </item>
 
 </layer-list>
