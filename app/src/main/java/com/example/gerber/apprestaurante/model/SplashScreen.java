@@ -16,7 +16,7 @@ public class SplashScreen extends AppCompatActivity {
 
         //tv1.setText(dato); //Muestra el usuario
         if(nombre.getString("nombre","").equals("")){
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
         }
@@ -24,10 +24,6 @@ public class SplashScreen extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
-
         }
-
     }
-
-
 }

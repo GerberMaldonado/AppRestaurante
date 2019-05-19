@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.gerber.apprestaurante.R;
 
-public class a_domicilio extends AppCompatActivity {
+public class DomicilioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a_domicilio);
+        setContentView(R.layout.activity_domicilio);
     }
 }

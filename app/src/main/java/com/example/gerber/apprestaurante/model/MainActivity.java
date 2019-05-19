@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void menu (View view){
-        Intent i = new Intent(this, Menu.class); startActivity(i);
+        Intent i = new Intent(this, MenuActivity.class); startActivity(i);
     }
     public void domicilio (View view){
-        Intent i = new Intent(this, a_domicilio.class); startActivity(i);
+        Intent i = new Intent(this, DomicilioActivity.class); startActivity(i);
     }
     public void reservacion (View view){
-        Intent i = new Intent (this, Reservacion.class); startActivity(i);
+        Intent i = new Intent (this, ReservacionActivity.class); startActivity(i);
     }
 
 }

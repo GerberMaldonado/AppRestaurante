@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.gerber.apprestaurante.R;
 
-public class Reservacion extends AppCompatActivity {
+public class ReservacionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

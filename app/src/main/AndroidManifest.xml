@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".model.Reservacion" />
-        <activity android:name=".model.a_domicilio" />
-        <activity android:name=".model.Menu" />
+        <activity android:name=".model.ReservacionActivity" />
+        <activity android:name=".model.DomicilioActivity" />
+        <activity android:name=".model.MenuActivity" />
         <activity android:name=".model.MainActivity"></activity>
 
         <activity
-            android:name=".model.Login"
+            android:name=".model.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
 

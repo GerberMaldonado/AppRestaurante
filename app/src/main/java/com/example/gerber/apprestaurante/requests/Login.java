@@ -1,12 +1,8 @@
+
 package com.example.gerber.apprestaurante.requests;
 
-import com.google.gson.Gson;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 public class Login {
 
@@ -44,10 +40,5 @@ public class Login {
         this.telefonoUsuario = telefonoUsuario;
     }
 
-    public static ArrayList<Login> obtenerLogin(String json){
-        Gson gson = new Gson();
-        Type type = new TypeToken<ArrayList<Login>>(){}.getType();
-        return gson.fromJson(json, type);
-    }
-
 }
+

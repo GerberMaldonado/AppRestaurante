@@ -1,59 +1,60 @@
 package com.example.gerber.apprestaurante.Adaptadors;
 
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.example.gerber.apprestaurante.R;
 import com.example.gerber.apprestaurante.requests.Login;
+import java.util.List;
 
-import java.util.ArrayList;
+public class LoginAdapter extends RecyclerView.Adapter<LoginAdapter.LoginViewHolder> {
 
-/**
- * Created by gerber on 29/03/2018.
- */
+    List<Login> lista;
 
-public class LoginAdapter extends BaseAdapter {
-    Context context;
-    ArrayList<Login> loginArrayList;
-
-    public LoginAdapter(Context context, ArrayList<Login> loginArrayList) {
-        this.context = context;
-        this.loginArrayList = loginArrayList;
+    public LoginAdapter(List<Login> lista) {
+        this.lista = lista;
     }
 
     @Override
-    public int getCount() {
-        return this.loginArrayList.size();
+    public LoginViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.login_row,parent,false);
+
+        return new LoginViewHolder(v);
     }
 
     @Override
-    public Object getItem(int position) {
-        return this.loginArrayList.get(position);
+    public void onBindViewHolder(LoginViewHolder holder, int position) {
+        holder.bindLogin(lista.get(position));
+    }
+
+    public void addLogin(Login login){
+        lista.add(login);
+        notifyDataSetChanged();
     }
 
     @Override
-    public long getItemId(int position) {
-        return position;
+    public int getItemCount() {
+        return lista.size();
     }
-    @Override
-    public View getView(int position, View convertViw, ViewGroup parent) {
-        LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.activity_login, parent, false);
 
-        TextView Nombre = (TextView) view.findViewById(R.id.editText);
-        TextView Telefono = (TextView) view.findViewById(R.id.editText2);
+    public class LoginViewHolder extends RecyclerView.ViewHolder{
 
-        Login login = this.loginArrayList.get(position);
-        if(login != null){
+        TextView tvNombre;
+        TextView tvId;
 
-            Nombre.setText(String.format("Nombre: %s", login.getNombreUsuario()));
-            Telefono.setText(String.format("Telefono: %s", login.getTelefonoUsuario()));
-
+        public LoginViewHolder(View itemView) {
+            super(itemView);
+            //tvNombre = itemView.findViewById(R.id.tvPaciente);
+            tvId = itemView.findViewById(R.id.tvId);
         }
-        return view;
+
+        public void bindLogin(Login login){
+            String nombre = login.getNombreUsuario();
+            tvNombre.setText(nombre);
+            tvId.setText(String.valueOf(login.getTelefonoUsuario()));
+        }
+
     }
 }

@@ -106,6 +106,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -117,6 +118,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="paddingPercent" value="-5" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -129,8 +131,13 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="C:\Users\GChronos\Documents\logo.png" />
+<<<<<<< HEAD
+                                      <entry key="imageAsset" value="C:\Users\GChronos\Desktop\ic_icon.png" />
                                       <entry key="outputName" value="ic_logo" />
+=======
+                                      <entry key="imageAsset" value="C:\Users\Brandon\Desktop\Ingenieria de software\imagenes\splash.png" />
+                                      <entry key="outputName" value="ic_splash" />
+>>>>>>> eb70aa0ef9504a971ee80d282f13698c365e5136
                                     </map>
                                   </option>
                                 </PersistentState>
