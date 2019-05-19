@@ -9,12 +9,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-<<<<<<< HEAD
             android:src="@drawable/loginpro1"/>
-=======
-            android:src="@drawable/splash2" />
-
->>>>>>> eb70aa0ef9504a971ee80d282f13698c365e5136
     </item>
 
 </layer-list>

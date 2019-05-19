@@ -131,13 +131,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-<<<<<<< HEAD
                                       <entry key="imageAsset" value="C:\Users\GChronos\Desktop\ic_icon.png" />
                                       <entry key="outputName" value="ic_logo" />
-=======
-                                      <entry key="imageAsset" value="C:\Users\Brandon\Desktop\Ingenieria de software\imagenes\splash.png" />
-                                      <entry key="outputName" value="ic_splash" />
->>>>>>> eb70aa0ef9504a971ee80d282f13698c365e5136
                                     </map>
                                   </option>
                                 </PersistentState>
