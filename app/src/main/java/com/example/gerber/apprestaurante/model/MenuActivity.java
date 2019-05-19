@@ -80,7 +80,7 @@ public class MenuActivity extends AppCompatActivity{
     }
 
     private void iniciarControles(){
-        rvLogin = findViewById(R.id.rvLogin);
+        rvLogin = findViewById(R.id.rvMenu);
         fabAdd = findViewById(R.id.fabAdd);
     }
 /*
