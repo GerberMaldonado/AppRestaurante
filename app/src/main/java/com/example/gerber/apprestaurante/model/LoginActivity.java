@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 
 import android.widget.Button;
@@ -79,6 +80,21 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void RegistrarUsuario(Login login){
+
+        String nombre = nombreE.getText().toString().trim();
+        String telefono = telefonoE.getText().toString().trim();
+
+        if (nombre.isEmpty()) {
+            nombreE.setError("Ingresar Nombre");
+            nombreE.requestFocus();
+            return;
+        }
+
+        if (telefono.isEmpty()) {
+            telefonoE.setError("Ingresar Teléfono");
+            telefonoE.requestFocus();
+            return;
+        }
 
         final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
         dialog.setMessage("Registrando");

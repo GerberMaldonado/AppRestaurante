@@ -10,28 +10,52 @@
     android:orientation="vertical"
     tools:context=".model.MainActivity">
 
-    <TextView
+    <!--Fila 1-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/elije"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <!--Opcion 1-->
+        <LinearLayout
+            android:id="@+id/linear_7"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imagen_menu6"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:src="@drawable/principal" />
+
+            <TextView
+                android:id="@+id/menu5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:text="Elije una opción"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Fin de Fila 1-->
 
     <!--Fila 1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <!--Opcion 1-->
         <LinearLayout
             android:id="@+id/linear_0"
             android:layout_width="100dp"
-            android:layout_height="180dp"
-            android:layout_margin="10dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
             android:layout_weight="1"
             android:background="@drawable/botones_curvados"
             android:onClick="domicilio"
@@ -43,9 +67,9 @@
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:clickable="false"
-                android:src="@mipmap/ic_a_domicilio" />
+                android:src="@mipmap/ic_domicilio" />
 
             <TextView
                 android:id="@+id/txt_sem1"
@@ -53,18 +77,18 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:clickable="false"
-                android:padding="8dp"
+
                 android:text="@string/a_domicilio"
                 android:textAlignment="center"
-                android:textColor="@color/colorTextIcons"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
         </LinearLayout>
         <!--Opcion 2-->
         <LinearLayout
             android:id="@+id/linear_1"
             android:layout_width="100dp"
-            android:layout_height="180dp"
-            android:layout_margin="10dp"
+            android:layout_height="140dp"
+            android:layout_margin="4dp"
             android:layout_weight="1"
             android:background="@drawable/botones_curvados"
             android:onClick="reservacion"
@@ -75,7 +99,7 @@
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:src="@mipmap/ic_reservar" />
 
             <TextView
@@ -83,10 +107,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:padding="8dp"
+
                 android:text="@string/reservar"
                 android:textAlignment="center"
-                android:textColor="@color/colorTextIcons"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
@@ -96,15 +120,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <!--Opcion 1-->
         <LinearLayout
             android:id="@+id/linear_3"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_margin="10dp"
+            android:layout_height="130dp"
+            android:layout_margin="4dp"
             android:layout_weight="1"
             android:background="@drawable/botones_curvados"
             android:onClick="menu"
@@ -115,7 +138,6 @@
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
                 android:clickable="false"
                 android:src="@mipmap/ic_menu" />
 
@@ -123,15 +145,14 @@
                 android:id="@+id/menu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
                 android:clickable="false"
-                android:padding="8dp"
                 android:text="@string/menu"
                 android:textAlignment="center"
-                android:textColor="@color/colorTextIcons"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>
     <!--Fin de Fila 1-->
+
 </LinearLayout>
