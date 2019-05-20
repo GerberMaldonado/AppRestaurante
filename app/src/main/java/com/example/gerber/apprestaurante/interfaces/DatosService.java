@@ -15,4 +15,10 @@ public interface DatosService {
 
     @POST("api_rest_crud_vdos/metodos_insertar/create_login.php")
     Call<Login> saveLogin(@Body Login login);
+
+    @POST("api_rest_crud_vdos/metodos_insertar/create_reservacion.php")
+    Call<Reservacion> saveReservacion(@Body Reservacion reservacion);
+
+    @POST("api_rest_crud_vdos/metodos_insertar/create_pedido_a_domicilio.php")
+    Call<Domicilio> saveDomicilio(@Body Domicilio domicilio);
 }

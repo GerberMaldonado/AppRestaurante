@@ -37,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:clickable="false"
                 android:textAlignment="center"
-                android:text="Elije una opción"
+                android:text="¡Elije una opción!"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -80,7 +80,7 @@
 
                 android:text="@string/a_domicilio"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorAccent1"
                 android:textSize="18sp" />
         </LinearLayout>
         <!--Opcion 2-->
@@ -110,7 +110,7 @@
 
                 android:text="@string/reservar"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorAccent1"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
@@ -148,7 +148,7 @@
                 android:clickable="false"
                 android:text="@string/menu"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorAccent1"
                 android:textSize="18sp" />
         </LinearLayout>
 

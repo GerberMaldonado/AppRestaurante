@@ -2,8 +2,12 @@
 <resources>
     <color name="colorPrimary">#FF8800</color>
     <color name="colorPrimaryDark">#FF8800</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent">#FF4081</color>
+    //Calendario
+    <color name="colorAccent1">#FFFFFF</color>
+
     //Color icons
     <color name="colorTextIcons">#000000</color>
     <color name="colorFormBackground">#e4e4e4</color>
+
 </resources>
