@@ -49,48 +49,22 @@
         android:textSize="20dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fecha:"
         android:id="@+id/bfecha"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/o_rounded_button"
-        android:layout_alignParentLeft="true"
-        android:textColor="@color/colorAccent1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="156dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hora:"
-        android:id="@+id/bhora"
-        android:layout_below="@+id/bfecha"
-        android:background="@drawable/o_rounded_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/colorAccent1"
-        android:layout_marginTop="40dp" />
-
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/efecha"
-        android:layout_alignTop="@+id/bfecha"
-        android:layout_toRightOf="@+id/bfecha"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ehora"
-        android:layout_alignBottom="@+id/bhora"
-        android:layout_toRightOf="@+id/bhora"
-        android:shadowColor="@color/colorAccent1"
-        android:layout_alignRight="@+id/efecha"
-        android:layout_alignEnd="@+id/efecha" />
+        android:layout_marginStart="118dp"
+        android:layout_marginLeft="118dp"
+        android:layout_marginTop="231dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:background="@drawable/o_rounded_button"
+        android:text="Elije tu menu"
+        android:textColor="@color/colorAccent1" />
 
 
     <Button

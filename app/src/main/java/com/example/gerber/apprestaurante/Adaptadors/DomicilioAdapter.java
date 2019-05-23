@@ -22,7 +22,7 @@ public class DomicilioAdapter extends RecyclerView.Adapter<DomicilioAdapter.Menu
 
     @Override
     public MenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_row,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cliente_row,parent,false);
 
         return new MenuViewHolder(v);
     }

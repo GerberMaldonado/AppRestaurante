@@ -1,11 +1,10 @@
 package com.example.gerber.apprestaurante.model;
 
 import android.Manifest;
-import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
-import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -20,9 +19,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.gerber.apprestaurante.R;
@@ -30,7 +26,6 @@ import com.example.gerber.apprestaurante.interfaces.DatosService;
 import com.example.gerber.apprestaurante.requests.Domicilio;
 
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
@@ -40,13 +35,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DomicilioActivity extends AppCompatActivity implements View.OnClickListener {
-    private final String baseUrl = "http://192.168.20.104/";
+public class DomicilioActivity extends AppCompatActivity{
+    private final String baseUrl = "http://d5kp4ul.shekalug.org/";
     Button bfecha, bhora, btn_enviar;
-    EditText efecha,ehora;
     private  int dia,mes,ano,hora,minutos;
     DatosService domicilioService;
-    String idlogin = "1";
     String dir; //Se almacena la direccion
     String coor; //Se almacenan las coordenadas
     String fechaF = "1111/05/1";
@@ -63,16 +56,10 @@ public class DomicilioActivity extends AppCompatActivity implements View.OnClick
             locationStart();
         }
 
-
-        bfecha=(Button)findViewById(R.id.bfecha);
-        bhora=(Button)findViewById(R.id.bhora);
-        efecha= findViewById(R.id.efecha);
-        ehora= findViewById(R.id.ehora);
         btn_enviar = findViewById(R.id.btn_enviar);
 
-        bfecha.setOnClickListener(this);
-        bhora.setOnClickListener(this);
-
+        final SharedPreferences nombreG = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        final SharedPreferences telefonoG = getSharedPreferences("datos", Context.MODE_PRIVATE);
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -83,45 +70,15 @@ public class DomicilioActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onClick(View v) {
                 Domicilio domicilio = new Domicilio();
+                domicilio.setClientesNombreCliente(nombreG.getString("nombre", ""));
+                domicilio.setTelefonoCliente(telefonoG.getString("telefono", ""));
                 domicilio.setFechaPedido(fechaF);
                 domicilio.setHorarioSalida(horaF);
                 domicilio.setUbicacionCliente(dir);
-                domicilio.setLoginIdLogin(idlogin);
+                domicilio.setCoordenadasCliente(coor);
                 RegistrarUsuario(domicilio);
             }
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(v==bfecha){
-            final Calendar c= Calendar.getInstance();
-            dia=c.get(Calendar.DAY_OF_MONTH);
-            mes=c.get(Calendar.MONTH);
-            ano=c.get(Calendar.YEAR);
-
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    efecha.setText(year+"/"+(monthOfYear+1)+"/"+dayOfMonth);
-                }
-            }
-                    ,ano,mes,dia);
-            datePickerDialog.show();
-        }
-        if (v==bhora){
-            final Calendar c= Calendar.getInstance();
-            hora=c.get(Calendar.HOUR_OF_DAY);
-            minutos=c.get(Calendar.MINUTE);
-
-            TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
-                @Override
-                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                    ehora.setText(hourOfDay+":"+minute);
-                }
-            },hora,minutos,false);
-            timePickerDialog.show();
-        }
     }
 
     public void RegistrarUsuario(Domicilio domicilio){

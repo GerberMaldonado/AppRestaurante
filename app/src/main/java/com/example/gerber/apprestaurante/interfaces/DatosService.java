@@ -10,15 +10,15 @@ import retrofit2.http.POST;
 
 public interface DatosService {
 
-    @GET("api_rest_crud_vdos/metodos_lectura/read_menus.php")
+    @GET("metodos_lectura/read_menus.php")
     Call< List<Menu> > getMenu();
 
-    @POST("api_rest_crud_vdos/metodos_insertar/create_login.php")
-    Call<Login> saveLogin(@Body Login login);
+    @POST("metodos_insertar/create_cliente.php")
+    Call<Cliente> saveLogin(@Body Cliente cliente);
 
-    @POST("api_rest_crud_vdos/metodos_insertar/create_reservacion.php")
+    @POST("metodos_insertar/create_reservacion.php")
     Call<Reservacion> saveReservacion(@Body Reservacion reservacion);
 
-    @POST("api_rest_crud_vdos/metodos_insertar/create_pedido_a_domicilio.php")
+    @POST("metodos_insertar/create_pedido_a_domicilio.php")
     Call<Domicilio> saveDomicilio(@Body Domicilio domicilio);
 }

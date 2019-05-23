@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 
 import android.widget.Button;
@@ -16,7 +15,7 @@ import android.widget.Toast;
 
 import com.example.gerber.apprestaurante.R;
 import com.example.gerber.apprestaurante.interfaces.DatosService;
-import com.example.gerber.apprestaurante.requests.Login;
+import com.example.gerber.apprestaurante.requests.Cliente;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,9 +23,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class LoginActivity extends AppCompatActivity {
+public class ClienteActivity extends AppCompatActivity {
 
-    private final String baseUrl = "http://192.168.20.104/";
+    private final String baseUrl = "http://d5kp4ul.shekalug.org/";
 
     //Variables para almacenar el nombre
     EditText GNombre; //Recive Nombre
@@ -40,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_cliente);
 
         submitBtn = findViewById(R.id.btnRegistrar);
         nombreE = findViewById(R.id.ENombre);
@@ -54,10 +53,10 @@ public class LoginActivity extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Login login = new Login();
-                login.setNombreUsuario(nombreE.getText().toString());
-                login.setTelefonoUsuario(telefonoE.getText().toString());
-                RegistrarUsuario(login);
+                Cliente cliente = new Cliente();
+                cliente.setNombreCliente(nombreE.getText().toString());
+                cliente.setTelefonoCliente(telefonoE.getText().toString());
+                RegistrarUsuario(cliente);
             }
         });
 
@@ -79,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
         edit2.commit();
     }
 
-    public void RegistrarUsuario(Login login){
+    public void RegistrarUsuario(Cliente cliente){
 
         String nombre = nombreE.getText().toString().trim();
         String telefono = telefonoE.getText().toString().trim();
@@ -96,18 +95,18 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
+        final ProgressDialog dialog = new ProgressDialog(ClienteActivity.this);
         dialog.setMessage("Registrando");
         dialog.show();
-        Call<Login> l = loginService.saveLogin(login);
-        l.enqueue(new Callback<Login>() {
+        Call<Cliente> l = loginService.saveLogin(cliente);
+        l.enqueue(new Callback<Cliente>() {
             @Override
-            public void onResponse(Call<Login> call, Response<Login> response) {
+            public void onResponse(Call<Cliente> call, Response<Cliente> response) {
                 if(response.isSuccessful()){
-                    Login loginResponse = response.body();
-                    //adapter.addLogin(loginResponse);
+                    Cliente clienteResponse = response.body();
+                    //adapter.addLogin(clienteResponse);
                     Toast.makeText(getApplicationContext(),"Usuario Registrado",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(ClienteActivity.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     Guardar();
@@ -117,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
             @Override
-            public void onFailure(Call<Login> call, Throwable t) {
+            public void onFailure(Call<Cliente> call, Throwable t) {
                 if(dialog.isShowing()){
                     dialog.dismiss();
                 }

@@ -8,18 +8,21 @@ public class Reservacion {
     @SerializedName("idReservacion")
     @Expose
     private String idReservacion;
+    @SerializedName("Clientes_nombreCliente")
+    @Expose
+    private String clientesNombreCliente;
     @SerializedName("fechaReservacion")
     @Expose
     private String fechaReservacion;
+    @SerializedName("horaReservacion")
+    @Expose
+    private String horaReservacion;
     @SerializedName("Mesas_idMesa")
     @Expose
     private String mesasIdMesa;
     @SerializedName("Establecimientos_idEstablecimiento")
     @Expose
     private String establecimientosIdEstablecimiento;
-    @SerializedName("Login_idLogin")
-    @Expose
-    private String loginIdLogin;
 
     public String getIdReservacion() {
         return idReservacion;
@@ -29,12 +32,28 @@ public class Reservacion {
         this.idReservacion = idReservacion;
     }
 
+    public String getClientesNombreCliente() {
+        return clientesNombreCliente;
+    }
+
+    public void setClientesNombreCliente(String clientesNombreCliente) {
+        this.clientesNombreCliente = clientesNombreCliente;
+    }
+
     public String getFechaReservacion() {
         return fechaReservacion;
     }
 
     public void setFechaReservacion(String fechaReservacion) {
         this.fechaReservacion = fechaReservacion;
+    }
+
+    public String getHoraReservacion() {
+        return horaReservacion;
+    }
+
+    public void setHoraReservacion(String horaReservacion) {
+        this.horaReservacion = horaReservacion;
     }
 
     public String getMesasIdMesa() {
@@ -53,12 +72,5 @@ public class Reservacion {
         this.establecimientosIdEstablecimiento = establecimientosIdEstablecimiento;
     }
 
-    public String getLoginIdLogin() {
-        return loginIdLogin;
-    }
-
-    public void setLoginIdLogin(String loginIdLogin) {
-        this.loginIdLogin = loginIdLogin;
-    }
-
 }
+

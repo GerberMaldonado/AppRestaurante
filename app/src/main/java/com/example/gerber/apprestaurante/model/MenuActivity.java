@@ -23,7 +23,7 @@ import android.support.design.widget.FloatingActionButton;
 
 public class MenuActivity extends AppCompatActivity{
 
-    private final String baseUrl = "http://192.168.20.104/";
+    private final String baseUrl = "http://d5kp4ul.shekalug.org/";
     RecyclerView rvLogin;
     FloatingActionButton fabAdd;
     List<Menu> listaMenu = new ArrayList<>();

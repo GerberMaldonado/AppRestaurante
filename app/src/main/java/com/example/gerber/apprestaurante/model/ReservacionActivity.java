@@ -3,7 +3,9 @@ package com.example.gerber.apprestaurante.model;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,20 +26,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ReservacionActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final String baseUrl = "http://192.168.20.104/";
+    private final String baseUrl = "http://d5kp4ul.shekalug.org/";
     Button bfecha, bhora, btn_enviar;
     EditText efecha,ehora, emesa;
     private  int dia,mes,ano,hora,minutos;
     DatosService reservacionService;
     String establecimiento = "1";
-    String idlogin = "1";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservacion);
-
 
         bfecha=(Button)findViewById(R.id.bfecha);
         bhora=(Button)findViewById(R.id.bhora);
@@ -49,6 +48,7 @@ public class ReservacionActivity extends AppCompatActivity implements View.OnCli
         bfecha.setOnClickListener(this);
         bhora.setOnClickListener(this);
 
+        final SharedPreferences nombreGuardado = getSharedPreferences("datos", Context.MODE_PRIVATE);
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -59,10 +59,11 @@ public class ReservacionActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onClick(View v) {
                 Reservacion reservacion = new Reservacion();
+                reservacion.setClientesNombreCliente(nombreGuardado.getString("nombre", ""));
                 reservacion.setFechaReservacion(efecha.getText().toString());
+                reservacion.setHoraReservacion(ehora.getText().toString());
                 reservacion.setMesasIdMesa(emesa.getText().toString());
                 reservacion.setEstablecimientosIdEstablecimiento(establecimiento);
-                reservacion.setLoginIdLogin(idlogin);
                 RegistrarUsuario(reservacion);
             }
         });

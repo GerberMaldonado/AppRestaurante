@@ -8,6 +8,12 @@ public class Domicilio {
     @SerializedName("idPedido_a_Domicilio")
     @Expose
     private String idPedidoADomicilio;
+    @SerializedName("Clientes_nombreCliente")
+    @Expose
+    private String clientesNombreCliente;
+    @SerializedName("telefonoCliente")
+    @Expose
+    private String telefonoCliente;
     @SerializedName("fechaPedido")
     @Expose
     private String fechaPedido;
@@ -17,9 +23,9 @@ public class Domicilio {
     @SerializedName("ubicacionCliente")
     @Expose
     private String ubicacionCliente;
-    @SerializedName("Login_idLogin")
+    @SerializedName("coordenadasCliente")
     @Expose
-    private String loginIdLogin;
+    private String coordenadasCliente;
 
     public String getIdPedidoADomicilio() {
         return idPedidoADomicilio;
@@ -27,6 +33,22 @@ public class Domicilio {
 
     public void setIdPedidoADomicilio(String idPedidoADomicilio) {
         this.idPedidoADomicilio = idPedidoADomicilio;
+    }
+
+    public String getClientesNombreCliente() {
+        return clientesNombreCliente;
+    }
+
+    public void setClientesNombreCliente(String clientesNombreCliente) {
+        this.clientesNombreCliente = clientesNombreCliente;
+    }
+
+    public String getTelefonoCliente() {
+        return telefonoCliente;
+    }
+
+    public void setTelefonoCliente(String telefonoCliente) {
+        this.telefonoCliente = telefonoCliente;
     }
 
     public String getFechaPedido() {
@@ -53,12 +75,12 @@ public class Domicilio {
         this.ubicacionCliente = ubicacionCliente;
     }
 
-    public String getLoginIdLogin() {
-        return loginIdLogin;
+    public String getCoordenadasCliente() {
+        return coordenadasCliente;
     }
 
-    public void setLoginIdLogin(String loginIdLogin) {
-        this.loginIdLogin = loginIdLogin;
+    public void setCoordenadasCliente(String coordenadasCliente) {
+        this.coordenadasCliente = coordenadasCliente;
     }
 
 }
