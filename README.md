@@ -1,3 +1,6 @@
+Reference-style: 
+![alt text][logo]
+
 [logo]: https://github.com/GerberMaldonado/AppRestaurante/blob/master/Documentaci%C3%B3n/icon.png "Logo"
 
 # Restaurante S.M.
