@@ -4,3 +4,5 @@ AppRestaurante es una Aplicacion movil que permitira a los restaurantes organiza
 # Documentación y Manul de Usuario
 
 [Documentación](https://github.com/GerberMaldonado/AppRestaurante/blob/master/Documentaci%C3%B3n/DOCUMENTACION%20APP%20RESTAURANTE%20S.M.pdf)
+
+[Manual de Usuario](https://github.com/GerberMaldonado/AppRestaurante/blob/master/Documentaci%C3%B3n/MANUAL%20DE%20USUARIO%20PARA%20RESTAURANTE%20S.M.pdf)
