@@ -14,18 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".model.ReservacionActivity" />
-        <activity android:name=".model.DomicilioActivity" />
-        <activity android:name=".model.MenuActivity" />
-        <activity android:name=".model.MainActivity"></activity>
+        <activity android:name="app.ejemplo.aplicacion.apprestaurante.model.ReservacionActivity" />
+        <activity android:name="app.ejemplo.aplicacion.apprestaurante.model.DomicilioActivity" />
+        <activity android:name="app.ejemplo.aplicacion.apprestaurante.model.MenuActivity" />
+        <activity android:name="app.ejemplo.aplicacion.apprestaurante.model.MainActivity"></activity>
 
         <activity
-            android:name=".model.ClienteActivity"
+            android:name="app.ejemplo.aplicacion.apprestaurante.model.ClienteActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
 
         <activity
-            android:name=".model.SplashScreen"
+            android:name="app.ejemplo.aplicacion.apprestaurante.model.SplashScreen"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_login2"
-    tools:context=".model.ClienteActivity">
+    tools:context="app.ejemplo.aplicacion.apprestaurante.model.ClienteActivity">
 
     <LinearLayout
         android:layout_width="326dp"
