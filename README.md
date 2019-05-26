@@ -1,4 +1,3 @@
-Reference-style: 
 ![alt text][logo]
 
 [logo]: https://github.com/GerberMaldonado/AppRestaurante/blob/master/app/src/main/res/mipmap-xxhdpi/ic_logo.png "Logo"
