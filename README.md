@@ -15,7 +15,7 @@ Restaurante S.M es una aplicación movil que permite a los restaurantes organiza
 
 ---
 
-# Pagina Web h1(Para recepcion de las reservaciones y pedidos)
+# Pagina Web h1 (Para recepcion de las reservaciones y pedidos)
 [Pagina Restaurante](http://104.248.51.232/?fbclid=IwAR0wVa-PY_lNUrG6-AGXUUCDZi1EqCSEu3MvDffGIHk2-PyDzt5kzXfNd4U)
 
 ---
