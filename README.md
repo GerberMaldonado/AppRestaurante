@@ -15,11 +15,11 @@ Restaurante S.M es una aplicación movil que permite a los restaurantes organiza
 
 ### Pagina Web 
 #### (Para recepcion de las reservaciones y pedidos)
-[Enlace de la pagina web](http://104.248.51.232/?fbclid=IwAR0wVa-PY_lNUrG6-AGXUUCDZi1EqCSEu3MvDffGIHk2-PyDzt5kzXfNd4U)
+[Pagina web del restaurante](http://104.248.51.232/?fbclid=IwAR0wVa-PY_lNUrG6-AGXUUCDZi1EqCSEu3MvDffGIHk2-PyDzt5kzXfNd4U)
 
 [Repositorio de la pagina web](https://github.com/GerberMaldonado/Restaurante-S.M.)
 
 ---
 
-### Play Store
-[Enlace de Descaraga en Google Play](https://play.google.com/store/apps/details?id=app.ejemplo.aplicacion.apprestaurante&fbclid=IwAR2lylUJSMI52y3ty3pljWqTKpjqsAXiMixc4T7w3gYa-CjHSY4hQyT1ijs)
+### Enlace de descarga de la APP
+[Descargar App](https://play.google.com/store/apps/details?id=app.ejemplo.aplicacion.apprestaurante&fbclid=IwAR2lylUJSMI52y3ty3pljWqTKpjqsAXiMixc4T7w3gYa-CjHSY4hQyT1ijs)
