@@ -1,7 +1,7 @@
 <p align="center"><img src="https://github.com/GerberMaldonado/AppRestaurante/blob/master/app/src/main/res/mipmap-xxhdpi/ic_logo.png"></p>
 
 ### Restaurante S.M.
-AppRestaurante es una Aplicacion movil que permitirá a los restaurantes organizar sus pedidos. La aplicación contendrá solicitud de comida con localización, observacional de mesa etc...
+AppRestaurante es una Aplicacion movil que permitirá a los restaurantes organizar sus pedidos. La aplicación contendrá solicitud de comida con localización GPS, reservación de mesa etc...
 
 ---
 
