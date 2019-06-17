@@ -1,7 +1,7 @@
 <p align="center"><img src="https://github.com/GerberMaldonado/AppRestaurante/blob/master/app/src/main/res/mipmap-xxhdpi/ic_logo.png"></p>
 
 ### Restaurante S.M.
-Restaurante S.M es una aplicación movil que permite a los restaurantes organizar sus operaciones. La aplicación contiene solicitud de comida, localización GPS, reservacion de mesa etc...
+AppRestaurante es una Aplicacion movil que permitirá a los restaurantes organizar sus pedidos. La aplicación contendrá solicitud de comida con localización, observacional de mesa etc...
 
 ---
 
